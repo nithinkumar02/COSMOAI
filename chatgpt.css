@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    background: black;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flowing Space Background */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* INTRO SCREEN */
+.intro-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Intro Title */
+.intro-title {
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: glowText 1.5s infinite alternate;
+}
+
+/* Start Button */
+.start-btn {
+    margin-top: 20px;
+    padding: 14px 25px;
+    font-size: 20px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.start-btn:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    transform: scale(1.1);
+}
+
+/* Chat Container */
+.chat-container {
+    width: 420px;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 100vh;
+    transition: transform 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* WhatsApp-Style Message Bubbles */
+.message {
+    max-width: 80%;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin: 5px;
+    display: inline-block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* User Messages (Right-Aligned) */
+.user-message {
+    background: linear-gradient(135deg, #007AFF, #004aad);
+    color: white;
+    align-self: flex-end;
+    text-align: left;
+    position: relative;
+}
+
+/* Bot Messages (Left-Aligned) */
+.bot-message {
+    background: linear-gradient(135deg, #34a853, #00b894);
+    color: white;
+    align-self: flex-start;
+    text-align: left;
+    position: relative;
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Box */
+.input-container {
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+}
+
+/* Input Styles */
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+button {
+    padding: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
